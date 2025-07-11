@@ -2,7 +2,7 @@
 # Chipstronics T2B Converter Design (SSCS Chipathon 2025 Proposal)
 
 We're **Chipstronics**, a team in the Digital Track of **SSCS Chipathon 2025**.  
-Our goal? To build a solid **T2B (Transistor-to-Behavioral) converter**.  
+Our goal? To build a solid **T2B (Thermometer to Binary) converter**.  
 This tool is super important for making complex chip designs easier to manage, especially during verification and simulation.  
 We think it'll really help digital designers tackle tricky projects.
 
@@ -11,7 +11,7 @@ In chip design, things get complex fast. Simulating entire systems at the transi
 Behavioral models, on the other hand, are high-level views that speed up simulations big time.
 
 The trick is accurately turning those detailed transistor designs into high-level behavioral models.  
-This "**Transistor-to-Behavioral**" (T2B) conversion is key for quick design changes and thorough testing.  
+This "**Thermometer to Binary**" (T2B) conversion is key for quick design changes and thorough testing.  
 Our T2B converter aims to automate this, making debugging faster and design completion smoother, even with huge libraries and custom blocks.
 
 ## What It Is (Overview)
@@ -20,16 +20,15 @@ A core part of it is an **8:3 priority encoder**. This encoder helps us sort and
 
 Think of it this way: raw input comes in, our converter processes it (using things like the priority encoder), and then spits out a formatted behavioral model.
 
-## The Nitty-Gritty (Specifications)
+## Specifications
 
 | Specification       | Value | Unit | Notes                                           |
 |---------------------|-------|------|-------------------------------------------------|
 | Operating Voltage   | 3.3   | V    | Works with GF180MCU D library standards         |
 | Maximum Frequency   | 100   | MHz  | Our target speed for efficient conversions      |
-| Maximum Fanout      | 4     | -    | Can drive multiple logic blocks without buffers |
-| Cell Height         | 9     | Layers | Matches GF180MCU D standard cell requirements |
-| Input ports (proposed) | 12  | Ports | For data and control signals (subject to change) |
-| Output ports (proposed) | 8 | Ports | For converted data and status                   |
+| Cell Height         | 9     | Layers | Chose 9 layers |
+| Input ports (proposed) | 8  | Ports | For data and control signals  |
+| Output ports (proposed) | 4 | Ports | For converted data and status                   |
 | Cell Area           | TBD   | um²  | Will know after layout and optimization         |
 
 ## How It Works (Design & Work Details)
@@ -60,11 +59,10 @@ This could mean sharing some underlying logic components, possibly including ele
 
 ## Our Team & Timeline
 
-The Chipstronics team is ready to tackle this! We've split up the work:
+We've split up the work:
 
-- **Core T2B Logic Design & Integration**: [Member 1 Name]  
-- **8:3 Priority Encoder Design & Optimization**: [Member 2 Name]  
-- **Overall Layout & Verification**: [Member 3 Name]  
+- **Core T2B Logic Design & Schematic**: Johan, Farhan
+- **Overall Layout & Verification**: Mohith, Zeeshan
 
 We'll follow a clear timeline over three months:
 
